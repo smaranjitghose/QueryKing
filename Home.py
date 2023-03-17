@@ -3,6 +3,8 @@
 import streamlit as st 
 import openai
 from utils import *
+from dotenv import load_dotenv
+import os
 
 def main():
     """
@@ -34,7 +36,9 @@ def main():
             key=None)
 
     query = st.text_area("Enter the desired question to generate SQL Query")
-    openai.api_key = st.secrets["openai_api_key"]
+    # openai.api_key = st.secrets["openai_api_key"]
+    load_dotenv()
+    openai.api_key = os.environ["openai_api_key"]
     prompt = f"Translate this natural language query into syntactically correct SQL:\n\n{query}\n\nSQL Query:"
     chb = st.checkbox("Table Schema")
     if chb:
