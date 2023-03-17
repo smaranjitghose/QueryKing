@@ -27,12 +27,12 @@ A minimalistic application to generate SQL queries using Generative AI built wit
 
 - Clone the repository 
     ```
-    git clone https://github.com/smaranjitghose/AIEmailGenerator.git
+    git clone https://github.com/smaranjitghose/QueryKing.git
     ```
 - Change the directory to the cloned project
     
     ```
-    cd AIEmailGenerator
+    cd QueryKing
     ```
 
 - Create a virtual environment
@@ -71,6 +71,19 @@ A minimalistic application to generate SQL queries using Generative AI built wit
     pip install -r requirements.txt
     ```
 
+- Sign Up for OpenAI API, Go to Settings and Get the API Key
+
+- Create an environment file
+    ```
+        touch .env
+    ```
+
+- Paste the API key in the `.env` file in the following format
+
+    ```
+    openai_api_key = XXXXXX
+    ```
+
 - Load the application
 
     ```
@@ -86,6 +99,7 @@ A minimalistic application to generate SQL queries using Generative AI built wit
     ```
     deactivate
     ```
+
 
 ## Acknowledgements 🙏
 
